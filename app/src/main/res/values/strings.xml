@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">DimensionFinder</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title">Dimension Finder</string>
+    <string name="tagline">Find dimensions with your camera!!</string>
+    <string name="drawer_head">Welcome to the App!</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="camera">Camera</string>
+    <string name="upload">Upload</string>
+    <string name="profile">Profile</string>
+    <string name="communicate">Communicate</string>
+    <string name="share">Share</string>
+    <string name="send">Send</string>
+</resources>
