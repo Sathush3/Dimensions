@@ -6,9 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:theme="@style/AppTheme.noActionBar"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
     tools:context=".MainScreen"
-
 
     >
 
@@ -24,21 +23,16 @@
             android:layout_height="match_parent"
             android:background="@color/textBackground">
 
-            <Button
-                android:id="@+id/camera_click"
-                android:layout_width="219dp"
-                android:layout_height="58dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="73dp"
-                android:layout_marginEnd="73dp"
-                android:layout_marginBottom="64dp"
-                android:background="@drawable/button_camera"
-                android:elevation="4dp"
-                app:layout_constraintBottom_toBottomOf="parent"
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
             <ImageView
                 android:id="@+id/headImage"
@@ -119,6 +113,20 @@
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/headImage" />
+
+            <Button
+                android:id="@+id/camera_click"
+                android:layout_width="219dp"
+                android:layout_height="58dp"
+                android:layout_marginStart="73dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="73dp"
+                android:background="@drawable/button_camera"
+                android:elevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/instruction3" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 

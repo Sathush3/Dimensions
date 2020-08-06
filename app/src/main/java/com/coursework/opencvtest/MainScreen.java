@@ -30,12 +30,12 @@ public class MainScreen extends AppCompatActivity implements NavigationView.OnNa
             "Get at this link";
 
     static {
-        
-        if (OpenCVLoader.initDebug()){
-            Log.d(TAG,"OpenCV is configured or connected successfully");
 
-        }else{
-            Log.d(TAG,"Open CV not connected or loaded");
+        if (OpenCVLoader.initDebug()) {
+            Log.d(TAG, "OpenCV is configured or connected successfully");
+
+        } else {
+            Log.d(TAG, "Open CV not connected or loaded");
         }
     }
 
@@ -44,25 +44,25 @@ public class MainScreen extends AppCompatActivity implements NavigationView.OnNa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
 
-//        Toolbar toolbar = findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         cameraButton = findViewById(R.id.camera_click);
         drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
 
-//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-//        drawer.addDrawerListener(toggle);
-//        toggle.syncState();
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
 
-cameraButton.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        Intent intent = new Intent(MainScreen.this,Measure.class);
-        startActivity(intent);
-    }
-});
+        cameraButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainScreen.this, Measure.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
@@ -82,7 +82,7 @@ cameraButton.setOnClickListener(new View.OnClickListener() {
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_camera:
-                Intent intent = new Intent(MainScreen.this,Measure.class);
+                Intent intent = new Intent(MainScreen.this, Measure.class);
                 startActivity(intent);
 
 //                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new cameraFragment()).commit();
@@ -97,9 +97,9 @@ cameraButton.setOnClickListener(new View.OnClickListener() {
                 Toast.makeText(this, "share", Toast.LENGTH_SHORT).show();
                 shareIntent = new Intent(Intent.ACTION_SEND);
                 shareIntent.setType("text/plain");
-                shareIntent.putExtra(Intent.EXTRA_SUBJECT,"My App");
-                shareIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
-                startActivity(Intent.createChooser(shareIntent,"Share via"));
+                shareIntent.putExtra(Intent.EXTRA_SUBJECT, "My App");
+                shareIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
+                startActivity(Intent.createChooser(shareIntent, "Share via"));
 
                 break;
             case R.id.nav_send:
