@@ -18,19 +18,34 @@
         android:layout_alignParentTop="true" />
 
     <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-6dp"
+        android:layout_marginBottom="184dp"
+
+        android:text="Please Enter the size in cm"
+        android:textAlignment="center" />
+
+    <TextView
         android:id="@+id/textView"
         android:layout_width="221dp"
         android:layout_height="56dp"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="0dp" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="40dp" />
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="92dp"
-        android:layout_height="57dp"
-        android:layout_alignParentBottom="true"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="163dp"
+        android:layout_marginBottom="115dp"
         android:ems="10"
         android:inputType="numberSigned"
         android:text="0"

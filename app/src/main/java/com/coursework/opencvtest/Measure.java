@@ -17,6 +17,7 @@ import android.os.Handler;
 import android.os.HandlerThread;
 import android.util.Size;
 import android.util.SparseIntArray;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.Surface;
 import android.view.SurfaceHolder;
@@ -35,6 +36,7 @@ import java.util.Arrays;
 public class Measure extends AppCompatActivity {
 
     private TextureView textureView;
+
     SurfacePainter Painter;
 
     private static final SparseIntArray ORIENTATIONS = new SparseIntArray();
@@ -181,7 +183,12 @@ public class Measure extends AppCompatActivity {
             SrcSize = newSrcSize;
         }
 
-        XY.setText(Float.toString(newAtoB) + "\n" + Double.toString(PixPerCm) + "\n" + Double.toString(newAtoB / PixPerCm));
+
+//        XY.setText(
+//                Float.toString(newAtoB) +
+//                        "\n" + Double.toString(PixPerCm) +
+//                        "\n" + Double.toString(newAtoB / PixPerCm));
+        XY.setText(Double.toString(newAtoB/PixPerCm));
     }
 
     private float Pifagor(float X, float Y){
@@ -314,5 +321,14 @@ public class Measure extends AppCompatActivity {
         mBackgroundThread = new HandlerThread("Camera Background");
         mBackgroundThread.start();
         mBackgroundHandler = new Handler(mBackgroundThread.getLooper());
+    }
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event)
+    {
+        if ((keyCode == KeyEvent.KEYCODE_BACK))
+        {
+            finish();
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

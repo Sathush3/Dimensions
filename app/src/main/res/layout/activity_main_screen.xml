@@ -6,8 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:theme="@style/AppTheme.noActionBar"
     tools:context=".MainScreen"
-    tools:openDrawer="start"
+
 
     >
 
@@ -17,22 +18,108 @@
         android:orientation="vertical">
 
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimary"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            android:visibility="visible"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            tools:visibility="visible" />
-
-        <FrameLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent"
+            android:background="@color/textBackground">
 
-        </FrameLayout>
+            <Button
+                android:id="@+id/camera_click"
+                android:layout_width="219dp"
+                android:layout_height="58dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="73dp"
+                android:layout_marginEnd="73dp"
+                android:layout_marginBottom="64dp"
+                android:background="@drawable/button_camera"
+                android:elevation="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/headImage"
+                android:layout_width="0dp"
+                android:layout_height="280dp"
+                android:background="@drawable/head"
+                android:contentDescription="@string/pic_header_title"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/instruction1"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="36dp"
+                android:fontFamily="@font/scada_bold"
+                android:gravity="top"
+                android:text="@string/instruction1"
+                android:textAppearance="@style/instruction1"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/heading" />
+
+            <TextView
+                android:id="@+id/instruction2"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/scada_bold"
+                android:gravity="center_vertical"
+                android:text="@string/instruction2"
+                android:textAppearance="@style/instruction2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/instruction1" />
+
+            <TextView
+                android:id="@+id/instruction3"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/scada_bold"
+                android:gravity="bottom"
+                android:text="@string/instructions3"
+                android:textAppearance="@style/instruction3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/instruction2" />
+
+            <TextView
+                android:id="@+id/heading"
+                android:layout_width="123dp"
+                android:layout_height="26dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="36dp"
+                android:layout_marginEnd="36dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/scada_bold"
+
+                android:gravity="center_horizontal|top"
+                android:text="@string/heading"
+                android:textAppearance="@style/heading"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/headImage" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </LinearLayout>

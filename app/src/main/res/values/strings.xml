@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">DimensionFinder</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="title">Dimension Finder</string>
     <string name="tagline">Find dimensions with your camera!!</string>
     <string name="drawer_head">Welcome to the App!</string>
@@ -12,4 +12,10 @@
     <string name="communicate">Communicate</string>
     <string name="share">Share</string>
     <string name="send">Send</string>
+    <string name="heading">Instructions</string>
+    <string name="instruction1">" 1. Adjust the line for reference object\n"</string>
+    <string name="instruction2">2. Enter the length for reference object in Cm</string>
+    <string name="instructions3">3. Now you can adjust the line to get any lengths.\n
+</string>
+    <string name="pic_header_title">Title</string>
 </resources>

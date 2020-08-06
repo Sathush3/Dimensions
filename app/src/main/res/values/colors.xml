@@ -7,4 +7,5 @@
     <color name="appThemeDark">#CAAB22</color>
     <color name="appThemeLight">#EFF15F</color>
     <color name="greyBackground">#D3D2CE</color>
+    <color name="textBackground">#030C12</color>
 </resources>

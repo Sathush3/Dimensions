@@ -78,7 +78,7 @@ public class SurfacePainter extends SurfaceView implements SurfaceHolder.Callbac
                 synchronized (surfaceHolder) {
                     canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
                     Paint pa = new Paint();
-                    pa.setColor(Color.GREEN); // установим зеленый цвет
+                    pa.setColor(Color.YELLOW);
                     pa.setStyle(Paint.Style.FILL);
                     canvas.drawCircle(Ax,Ay,10,pa);
                     canvas.drawCircle(Bx,By,10,pa);
