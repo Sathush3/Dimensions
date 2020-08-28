@@ -1,4 +1,4 @@
-package com.coursework.opencvtest;
+package com.coursework.opencvtest.onScreenRuler;
 
 import android.content.Context;
 import android.graphics.Canvas;

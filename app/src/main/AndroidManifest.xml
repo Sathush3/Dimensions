@@ -9,13 +9,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
-        <activity android:name=".Measure"
+        <activity android:name=".onScreenRuler.Measure"
             android:theme="@style/AppTheme.noActionBar"/>
     <activity
         android:name=".MainScreen"
         android:theme="@style/AppTheme.noActionBar" />
     <activity
-        android:name=".splashScreen"
+        android:name=".splashscreen.splashScreen"
         android:theme="@style/AppTheme.noActionBar">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />

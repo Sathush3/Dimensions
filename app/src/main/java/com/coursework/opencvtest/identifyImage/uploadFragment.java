@@ -1,4 +1,4 @@
-package com.coursework.opencvtest;
+package com.coursework.opencvtest.identifyImage;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
+
+import com.coursework.opencvtest.R;
 
 /**
  * A simple {@link Fragment} subclass.

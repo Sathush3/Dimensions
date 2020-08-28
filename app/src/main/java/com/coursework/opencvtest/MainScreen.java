@@ -15,9 +15,11 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.coursework.opencvtest.identifyImage.uploadFragment;
+import com.coursework.opencvtest.onScreenRuler.Measure;
 import com.google.android.material.navigation.NavigationView;
 
-import org.opencv.android.OpenCVLoader;
+
 
 
 public class MainScreen extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -28,16 +30,6 @@ public class MainScreen extends AppCompatActivity implements NavigationView.OnNa
     Intent shareIntent;
     String shareBody = "This is  great App! " +
             "Get at this link";
-
-    static {
-
-        if (OpenCVLoader.initDebug()) {
-            Log.d(TAG, "OpenCV is configured or connected successfully");
-
-        } else {
-            Log.d(TAG, "Open CV not connected or loaded");
-        }
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

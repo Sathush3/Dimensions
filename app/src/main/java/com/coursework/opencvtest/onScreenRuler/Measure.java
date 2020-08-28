@@ -1,4 +1,4 @@
-package com.coursework.opencvtest;
+package com.coursework.opencvtest.onScreenRuler;
 
 import android.Manifest;
 import android.content.Context;
@@ -30,6 +30,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+
+import com.coursework.opencvtest.R;
 
 import java.util.Arrays;
 

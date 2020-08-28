@@ -1,4 +1,4 @@
-package com.coursework.opencvtest;
+package com.coursework.opencvtest.splashscreen;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.coursework.opencvtest.MainScreen;
+import com.coursework.opencvtest.R;
 
 public class splashScreen extends AppCompatActivity {
 
