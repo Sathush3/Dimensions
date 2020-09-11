@@ -80,7 +80,10 @@ public class MainScreen extends AppCompatActivity implements NavigationView.OnNa
 //                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new cameraFragment()).commit();
                 break;
             case R.id.nav_upload:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new uploadFragment()).commit();
+                //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new uploadFragment()).commit();
+                Intent intent1 = new Intent(MainScreen.this,secondary.class);
+                startActivity(intent1);
+
                 break;
             case R.id.nav_profile:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new profileFragment()).commit();
